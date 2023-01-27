@@ -14,31 +14,44 @@
 
     <title>Frontend Mentor | Fylo data storage component</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
       <div class="fylo">
-        <h1>Fylo. Data Storage information</h1>
+        <h1 class="sr-only">Fylo. Data Storage information</h1>
         <img src="./images/logo.svg" alt="" />
-        <div class="fylo__icons">
-          <img src="./images/icon-document.svg" alt="" />
-          <img src="./images/icon-folder.svg" alt="" />
-          <img src="./images/icon-upload.svg" alt="" />
+        <div class="fylo__icons flex-group">
+          <div>
+            <img class="icon" src="./images/icon-document.svg" alt="" />
+          </div>
+          <div><img class="icon" src="./images/icon-folder.svg" alt="" /></div>
+          <div><img class="icon" src="./images/icon-upload.svg" alt="" /></div>
         </div>
       </div>
       <div class="data">
-        <p>You’ve used 815 GB of your storage</p>
-        <div class="slider"></div>
-        <div>
-          <p>0 GB</p>
-          <p>1000 GB</p>
+        <p>You’ve used <span class="bold">815 GB</span> of your storage</p>
+        <div class="slider">
+          <div class="fill">
+            <div class="thumb"></div>
+          </div>
         </div>
-
-        <div class="data-left">
-          <p>185 GB</p>
-          <p>Left</p>
+        <div class="flex-group">
+          <p class="bold">0 GB</p>
+          <p class="bold">1000 GB</p>
         </div>
+      </div>
+      <div class="data-left flex-group">
+        <p class="data-left__num">185</p>
+        <p class="data-left__heading">GB Left</p>
       </div>
     </main>
   </body>
